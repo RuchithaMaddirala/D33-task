@@ -8,18 +8,18 @@ const LeftPanel: React.FC = () => {
   return (
     <aside className="w-[280px] border-r border-gray-300 flex flex-col h-full bg-white">
       {/* Logo */}
-      <div className="p-4 border-b border-gray-300 bg-black">
+      <div className="p-4 border-b border-gray-300 bg-primary">
         <div className="h-10 flex items-center justify-start px-4">
-          <svg className="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="w-5 h-5 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
           </svg>
-          <span className="ml-2 font-bold text-primary">Dashboard</span>
+          <span className="ml-2 font-bold text-white">Dashboard</span>
         </div>
       </div>
       
       {/* Projects Header */}
       <div className="px-4 pt-5 pb-2">
-        <h2 className="font-semibold text-lg text-black">Projects</h2>
+        <h2 className="font-semibold text-lg text-primary">Projects</h2>
         <p className="text-xs text-gray-500 mt-1">Select a project to view details</p>
       </div>
       
@@ -37,11 +37,11 @@ const LeftPanel: React.FC = () => {
       
       {/* User Profile */}
       <div className="p-4 border-t border-gray-300 bg-gray-100 flex items-center">
-        <div className="w-9 h-9 rounded-full bg-black flex items-center justify-center text-primary font-medium text-sm">
+        <div className="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-blue-300 font-medium text-sm">
           JD
         </div>
         <div className="ml-3">
-          <p className="text-sm font-medium text-black">John Doe</p>
+          <p className="text-sm font-medium text-primary">John Doe</p>
           <p className="text-xs text-gray-500">Admin</p>
         </div>
       </div>

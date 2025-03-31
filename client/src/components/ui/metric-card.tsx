@@ -9,11 +9,11 @@ const MetricCard: React.FC<MetricCardProps> = ({ metric }) => {
   // Get a subtle background based on metric ID for variety
   const getMetricBackground = (id: number) => {
     const backgrounds = [
-      'bg-gray-100 border-gray-300',
-      'bg-white border-gray-300',
-      'bg-gray-100 border-gray-300',
-      'bg-white border-gray-300',
-      'bg-gray-100 border-gray-300'
+      'bg-blue-50 border-blue-200',
+      'bg-white border-blue-200',
+      'bg-blue-50 border-blue-200',
+      'bg-white border-blue-200',
+      'bg-blue-50 border-blue-200'
     ];
     return backgrounds[(id - 1) % backgrounds.length];
   };

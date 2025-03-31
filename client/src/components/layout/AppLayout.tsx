@@ -64,7 +64,7 @@ const AppLayout: React.FC = () => {
       {/* Resize Handle */}
       <div 
         ref={resizeHandleRef}
-        className="w-1 bg-gray-300 cursor-col-resize hover:bg-primary transition-colors"
+        className="w-1 bg-blue-200 cursor-col-resize hover:bg-primary transition-colors"
         style={{ display: isCopilotVisible ? 'block' : 'none' }}
       />
       
@@ -81,7 +81,7 @@ const AppLayout: React.FC = () => {
       <div className="absolute bottom-5 right-5">
         <button 
           onClick={toggleCopilot}
-          className="w-12 h-12 bg-black text-primary rounded-full flex items-center justify-center shadow-md hover:bg-gray-900 transition-colors"
+          className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-md hover:bg-primary/90 transition-colors"
           aria-label={isCopilotVisible ? "Hide Copilot" : "Show Copilot"}
         >
           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
