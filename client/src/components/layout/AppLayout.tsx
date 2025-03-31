@@ -57,14 +57,14 @@ const AppLayout: React.FC = () => {
   }, []);
   
   return (
-    <div className="flex h-screen overflow-hidden bg-slate-50">
+    <div className="flex h-screen overflow-hidden bg-gradient-to-br from-blue-50 to-white">
       <LeftPanel />
       <MiddlePanel />
       
       {/* Resize Handle */}
       <div 
         ref={resizeHandleRef}
-        className="w-1 bg-slate-200 cursor-col-resize hover:bg-primary/30 transition-colors"
+        className="w-1 bg-blue-200 cursor-col-resize hover:bg-primary transition-colors"
         style={{ display: isCopilotVisible ? 'block' : 'none' }}
       />
       
