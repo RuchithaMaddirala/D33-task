@@ -77,21 +77,7 @@ const AppLayout: React.FC = () => {
         }} 
       />
       
-      {/* Copilot Toggle Button with label - moved to top right */}
-      <div className="absolute top-4 right-5 flex items-center gap-2 z-10">
-        <div className="bg-gray-800 px-3 py-1.5 rounded-full text-xs font-medium text-white shadow-lg border border-gray-700">
-          {isCopilotVisible ? 'Hide Copilot' : 'Show Copilot'}
-        </div>
-        <button 
-          onClick={toggleCopilot}
-          className="w-9 h-9 bg-gradient-to-r from-primary to-indigo-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-indigo-500/30 hover:from-indigo-600 hover:to-primary transition-all"
-          aria-label={isCopilotVisible ? "Hide Copilot" : "Show Copilot"}
-        >
-          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-        </button>
-      </div>
+      {/* Removing the absolute-positioned Copilot toggle button */}
     </div>
   );
 };

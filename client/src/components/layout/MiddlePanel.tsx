@@ -3,12 +3,12 @@ import { useDashboard } from "@/context/DashboardContext";
 import MetricCard from "@/components/ui/metric-card";
 
 const MiddlePanel: React.FC = () => {
-  const { selectedProject, selectedProjectMetrics } = useDashboard();
+  const { selectedProject, selectedProjectMetrics, isCopilotVisible, toggleCopilot } = useDashboard();
   
   if (!selectedProject) return null;
   
   return (
-    <main className="flex-1 flex flex-col h-full overflow-auto bg-gray-900">
+    <main className="flex-1 flex flex-col h-full overflow-auto bg-gray-900 relative">
       {/* Header */}
       <header className="border-b border-gray-800 p-6 bg-gradient-to-r from-gray-900 to-gray-800">
         <div className="flex justify-between items-center">
@@ -46,6 +46,22 @@ const MiddlePanel: React.FC = () => {
           Export
         </button>
       </footer>
+      
+      {/* Copilot Toggle Button */}
+      <div className="absolute bottom-5 right-5 flex flex-col items-center">
+        <div className="bg-gray-800 px-3 py-1 rounded-full mb-2 text-xs font-medium text-white shadow-lg border border-gray-700">
+          Copilot
+        </div>
+        <button 
+          onClick={toggleCopilot}
+          className="w-11 h-11 bg-gradient-to-r from-primary to-indigo-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-indigo-500/30 hover:from-indigo-600 hover:to-primary transition-all"
+          aria-label={isCopilotVisible ? "Hide Copilot" : "Show Copilot"}
+        >
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </button>
+      </div>
     </main>
   );
 };
