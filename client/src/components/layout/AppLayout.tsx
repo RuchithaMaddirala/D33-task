@@ -57,14 +57,14 @@ const AppLayout: React.FC = () => {
   }, []);
   
   return (
-    <div className="flex h-screen overflow-hidden bg-gradient-to-br from-slate-50 to-purple-50">
+    <div className="flex h-screen overflow-hidden bg-slate-50">
       <LeftPanel />
       <MiddlePanel />
       
       {/* Resize Handle */}
       <div 
         ref={resizeHandleRef}
-        className="w-1 bg-gradient-to-b from-primary/30 to-primary/60 cursor-col-resize hover:bg-primary/80 transition-colors"
+        className="w-1 bg-slate-200 cursor-col-resize hover:bg-primary/30 transition-colors"
         style={{ display: isCopilotVisible ? 'block' : 'none' }}
       />
       
@@ -81,10 +81,10 @@ const AppLayout: React.FC = () => {
       <div className="absolute bottom-5 right-5">
         <button 
           onClick={toggleCopilot}
-          className="w-14 h-14 bg-gradient-to-r from-primary to-primary/80 rounded-full flex items-center justify-center shadow-lg hover:shadow-primary/20 transition-all hover:scale-105 text-white"
+          className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-md hover:bg-primary/90 transition-colors"
           aria-label={isCopilotVisible ? "Hide Copilot" : "Show Copilot"}
         >
-          <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
         </button>

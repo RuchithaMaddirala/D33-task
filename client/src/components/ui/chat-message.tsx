@@ -10,16 +10,16 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
   
   return (
     <div 
-      className={`flex flex-col max-w-[85%] p-4 rounded-2xl shadow-sm ${
+      className={`flex flex-col max-w-[85%] p-3 rounded-lg ${
         isUser 
-          ? 'bg-white border border-slate-200 self-start' 
-          : 'bg-gradient-to-r from-primary to-primary/80 text-white self-end'
+          ? 'bg-slate-100 self-start' 
+          : 'bg-primary/10 self-end'
       }`}
     >
-      <p className={`text-sm ${isUser ? 'text-slate-700' : 'text-white'}`}>
+      <p className="text-sm text-slate-700">
         {message.content}
       </p>
-      <span className={`text-xs mt-2 ${isUser ? 'text-slate-400' : 'text-white/70'}`}>
+      <span className="text-xs mt-1 text-slate-400">
         {isUser ? 'You' : 'Copilot'} • {new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
       </span>
     </div>
