@@ -77,8 +77,11 @@ const AppLayout: React.FC = () => {
         }} 
       />
       
-      {/* Copilot Toggle Button */}
-      <div className="absolute bottom-5 right-5">
+      {/* Copilot Toggle Button with label */}
+      <div className="absolute bottom-5 right-5 flex flex-col items-center">
+        <div className="bg-gray-800 px-3 py-1 rounded-full mb-2 text-xs font-medium text-white shadow-lg border border-gray-700">
+          Copilot {isCopilotVisible ? 'On' : 'Off'}
+        </div>
         <button 
           onClick={toggleCopilot}
           className="w-12 h-12 bg-gradient-to-r from-primary to-indigo-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-indigo-500/30 hover:from-indigo-600 hover:to-primary transition-all"
