@@ -12,14 +12,14 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
     <div 
       className={`flex flex-col max-w-[85%] p-3 rounded-lg ${
         isUser 
-          ? 'bg-blue-50 border border-blue-100 self-start' 
-          : 'bg-primary text-white self-end'
+          ? 'bg-gray-100 border border-gray-300 self-start' 
+          : 'bg-black text-primary self-end'
       }`}
     >
-      <p className={`text-sm ${isUser ? 'text-slate-700' : 'text-white'}`}>
+      <p className={`text-sm ${isUser ? 'text-gray-800' : 'text-primary'}`}>
         {message.content}
       </p>
-      <span className={`text-xs mt-1 ${isUser ? 'text-slate-500' : 'text-white/80'}`}>
+      <span className={`text-xs mt-1 ${isUser ? 'text-gray-500' : 'text-gray-400'}`}>
         {isUser ? 'You' : 'Copilot'} • {new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
       </span>
     </div>
