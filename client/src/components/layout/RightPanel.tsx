@@ -28,11 +28,11 @@ const RightPanel = forwardRef<HTMLDivElement, RightPanelProps>(({ style }, ref) 
   return (
     <aside 
       ref={ref}
-      className="border-l border-gray-800 flex flex-col h-full bg-gray-950"
+      className="border-l border-indigo-100 flex flex-col h-full bg-white"
       style={style}
     >
       {/* Header */}
-      <div className="p-4 border-b border-gray-800 bg-gradient-to-r from-indigo-600/90 to-primary/90">
+      <div className="p-4 border-b border-indigo-100 bg-gradient-to-r from-indigo-600/90 to-primary/90">
         <h2 className="text-lg font-semibold text-white">
           Dashboard Copilot
         </h2>
@@ -42,7 +42,7 @@ const RightPanel = forwardRef<HTMLDivElement, RightPanelProps>(({ style }, ref) 
       </div>
       
       {/* Messages */}
-      <div className="flex-1 flex flex-col p-4 space-y-4 overflow-y-auto bg-gray-900">
+      <div className="flex-1 flex flex-col p-4 space-y-4 overflow-y-auto bg-indigo-50/30">
         {messages.map(message => (
           <ChatMessage key={message.id} message={message} />
         ))}
@@ -50,13 +50,13 @@ const RightPanel = forwardRef<HTMLDivElement, RightPanelProps>(({ style }, ref) 
       </div>
       
       {/* Input */}
-      <div className="mt-auto p-4 border-t border-gray-800 bg-gray-900">
+      <div className="mt-auto p-4 border-t border-indigo-100 bg-white">
         <form onSubmit={handleSubmit} className="relative">
           <input
             ref={inputRef}
             type="text"
             placeholder="Ask about your dashboard..."
-            className="w-full p-3 pr-10 border border-gray-700 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-gray-800 shadow-md text-white placeholder-gray-400"
+            className="w-full p-3 pr-10 border border-indigo-200 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white shadow-md text-gray-800 placeholder-gray-400"
           />
           <button 
             type="submit"
