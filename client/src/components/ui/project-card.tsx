@@ -12,15 +12,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isSelected, onClick 
     <div 
       className={`p-4 rounded-lg cursor-pointer transition-all ${
         isSelected 
-          ? 'bg-primary border border-primary shadow-sm' 
-          : 'bg-white hover:bg-blue-50 hover:border-blue-200 border border-blue-200'
+          ? 'bg-gradient-to-r from-primary to-indigo-600 border border-indigo-500 shadow-lg' 
+          : 'bg-gray-900 hover:bg-gray-800 border border-gray-800 hover:border-gray-700'
       }`}
       onClick={onClick}
     >
-      <h3 className={`font-medium ${isSelected ? 'text-white' : 'text-black'}`}>
+      <h3 className={`font-medium ${isSelected ? 'text-white' : 'text-gray-200'}`}>
         {project.name}
       </h3>
-      <p className={`text-sm mt-1 ${isSelected ? 'text-blue-200' : 'text-black'}`}>
+      <p className={`text-sm mt-1 ${isSelected ? 'text-indigo-200' : 'text-gray-400'}`}>
         Last updated: {project.lastUpdated}
       </p>
     </div>
