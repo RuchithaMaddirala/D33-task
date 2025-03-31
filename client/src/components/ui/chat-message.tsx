@@ -16,10 +16,10 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
           : 'bg-primary text-white self-end'
       }`}
     >
-      <p className={`text-sm ${isUser ? 'text-gray-800' : 'text-white'}`}>
+      <p className={`text-sm ${isUser ? 'text-black' : 'text-white'}`}>
         {message.content}
       </p>
-      <span className={`text-xs mt-1 ${isUser ? 'text-gray-500' : 'text-blue-200'}`}>
+      <span className={`text-xs mt-1 ${isUser ? 'text-black' : 'text-blue-200'}`}>
         {isUser ? 'You' : 'Copilot'} • {new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
       </span>
     </div>

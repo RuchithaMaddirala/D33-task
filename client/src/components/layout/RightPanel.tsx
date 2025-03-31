@@ -28,11 +28,11 @@ const RightPanel = forwardRef<HTMLDivElement, RightPanelProps>(({ style }, ref) 
   return (
     <aside 
       ref={ref}
-      className="border-l border-gray-300 flex flex-col h-full bg-white"
+      className="border-l border-blue-200 flex flex-col h-full bg-white"
       style={style}
     >
       {/* Header */}
-      <div className="p-4 border-b border-gray-300 bg-primary">
+      <div className="p-4 border-b border-blue-200 bg-primary">
         <h2 className="text-lg font-semibold text-white">
           Dashboard Copilot
         </h2>
@@ -50,17 +50,17 @@ const RightPanel = forwardRef<HTMLDivElement, RightPanelProps>(({ style }, ref) 
       </div>
       
       {/* Input */}
-      <div className="mt-auto p-4 border-t border-gray-300 bg-blue-50">
+      <div className="mt-auto p-4 border-t border-blue-200 bg-blue-50">
         <form onSubmit={handleSubmit} className="relative">
           <input
             ref={inputRef}
             type="text"
             placeholder="Ask about your dashboard..."
-            className="w-full p-3 pr-10 border border-blue-200 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white shadow-sm"
+            className="w-full p-3 pr-10 border border-blue-200 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary bg-white shadow-sm text-black"
           />
           <button 
             type="submit"
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 w-7 h-7 bg-primary text-white rounded-md flex items-center justify-center hover:bg-gray-900 transition-colors"
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 w-7 h-7 bg-primary text-white rounded-md flex items-center justify-center hover:bg-blue-900 transition-colors"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M12 5l7 7-7 7" />
