@@ -50,7 +50,7 @@ const MiddlePanel: React.FC = () => {
       {/* Copilot Toggle Button */}
       <div className="absolute bottom-5 right-5 flex flex-col items-center">
         <div className="bg-white px-3 py-1 rounded-full mb-2 text-xs font-medium text-gray-700 shadow-md border border-indigo-200">
-          Copilot
+          JAI
         </div>
         <button 
           onClick={toggleCopilot}

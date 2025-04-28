@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectCard from "@/components/ui/project-card";
 import { useDashboard } from "@/context/DashboardContext";
+import logoPath from "../../assets/logo.jpg";
 
 const LeftPanel: React.FC = () => {
   const { projects, selectedProject, setSelectedProject } = useDashboard();
@@ -8,12 +9,14 @@ const LeftPanel: React.FC = () => {
   return (
     <aside className="w-[280px] border-r border-indigo-100 flex flex-col h-full bg-white">
       {/* Logo */}
-      <div className="p-4 border-b border-indigo-100 bg-gradient-to-r from-primary/90 to-indigo-600/90">
-        <div className="h-10 flex items-center justify-start px-4">
-          <svg className="w-5 h-5 text-indigo-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-          </svg>
-          <span className="ml-2 font-bold text-white">Dashboard</span>
+      <div className="py-3 px-4 border-4 border-indigo-500 bg-white relative mb-2 mx-2 rounded-md shadow-sm"> 
+          <div className="h-10 flex items-center justify-center">
+          <img 
+            src={logoPath} 
+            alt="D33 Logo" 
+            className="w-auto h-full" 
+            style={{ filter: 'none' }}
+          />
         </div>
       </div>
       

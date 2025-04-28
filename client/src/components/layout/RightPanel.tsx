@@ -34,10 +34,9 @@ const RightPanel = forwardRef<HTMLDivElement, RightPanelProps>(({ style }, ref) 
       {/* Header */}
       <div className="p-4 border-b border-indigo-100 bg-gradient-to-r from-indigo-600/90 to-primary/90">
         <h2 className="text-lg font-semibold text-white">
-          Dashboard Copilot
-        </h2>
+            JAI        </h2>
         <p className="text-sm text-indigo-200 mt-1">
-          Ask questions about your data
+        Just the Assistant you ever need!!
         </p>
       </div>
       
