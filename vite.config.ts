@@ -22,6 +22,7 @@ export default defineConfig({
         ]
       : []),
   ],
+  base: process.env.VITE_BASE_PATH || "/D33_Dashboard1",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "client", "src")
