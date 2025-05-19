@@ -4,12 +4,10 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "tsx server/index.ts",
-    "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
-    "start": "NODE_ENV=production node dist/index.js",
+    "dev": "vite",
+    "build": "vite build",
     "preview": "vite preview",
-    "check": "tsc",
-    "db:push": "echo 'Database functionality has been removed'"
+    "check": "tsc"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -51,8 +49,6 @@
     "date-fns": "^3.6.0",
 
     "embla-carousel-react": "^8.3.0",
-    "express": "^4.21.2",
-    "express-session": "^1.18.1",
     "framer-motion": "^11.13.1",
     "input-otp": "^1.2.4",
     "lucide-react": "^0.453.0",
